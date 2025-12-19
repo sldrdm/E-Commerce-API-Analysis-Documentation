@@ -1,7 +1,3 @@
-Kanka, GitHub reponun "vitrini" olacak, hem İK'cıları hem de teknik liderleri etkileyecek o canavar gibi README.md taslağını hazırladım. Bu taslak, senin sadece bir şeyler denediğini değil, bir metodolojiyle (Analiz -> Test -> Dokümantasyon) çalıştığını kanıtlayacak.
-
-Aşağıdaki metni kopyalayıp GitHub'daki README.md dosyanın içine yapıştırabilirsin:
-
 📚 E-Commerce Technical Analysis & API Testing Suite (BKM Kitap Case Study)
 Bu proje, bir e-ticaret platformunun (BKM Kitap) arama altyapısını Tersine Mühendislik (Reverse Engineering) yöntemleriyle analiz etmek, sistem mimarisini modellemek ve API uç noktalarını otomatik test scriptleri ile doğrulamak amacıyla hazırlanmış bir Teknik İş Analizi çalışmasıdır.
 
