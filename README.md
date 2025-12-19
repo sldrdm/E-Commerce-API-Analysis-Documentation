@@ -1,4 +1,5 @@
 📚 E-Commerce Technical Analysis & API Testing Suite (BKM Kitap Case Study)
+
 Bu proje, bir e-ticaret platformunun (BKM Kitap) arama altyapısını Tersine Mühendislik (Reverse Engineering) yöntemleriyle analiz etmek, sistem mimarisini modellemek ve API uç noktalarını otomatik test scriptleri ile doğrulamak amacıyla hazırlanmış bir Teknik İş Analizi çalışmasıdır.
 
 🎯 Proje Hedefleri
