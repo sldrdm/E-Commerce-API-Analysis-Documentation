@@ -1,0 +1,139 @@
+{
+  "info": {
+    "_postman_id": "c0f7064c-60ba-4f6d-932b-98a7d2c80db9",
+    "name": "BKM",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "https://bkm-best.wawlabs.com/search_v2?search_params=\\{%22row_per_page%22:20,%22page_number%22:1,%22query%22:%22Harry%20Potter2%22,%22facet%22:\\[\\{%22field%22:%22category%22,%22type%22:%22value%22\\},\\{%22field%22:%22writer%22,%22type%22:%22value%22\\}\\],%2",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "b5c0ab7c-c77e-4f58-8524-9518fac38049",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "e5e5e1f4-8802-43e6-b129-153b3f60e3d5",
+            "exec": [
+              "// 1. HTTP Durum Kodu Testi (Sistem ayakta mı?)\r",
+              "pm.test(\"İstek başarılı: Durum kodu 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "// 2. Yanıt Süresi Testi (Senin yavaşlık tezin için!)\r",
+              "pm.test(\"Yanıt süresi 800ms altında olmalı\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+              "});\r",
+              "\r",
+              "// 3. Veri Yapısı Testi (Stok verisi geliyor mu?)\r",
+              "var jsonData = pm.response.json();\r",
+              "pm.test(\"İlk üründe stok_level alanı mevcut\", function () {\r",
+              "    pm.expect(jsonData.res[0]).to.have.property('stock_level');\r",
+              "});\r",
+              "\r",
+              "// 4. İş Kuralı Testi (Harry Potter araması doğru mu?)\r",
+              "pm.test(\"Arama sonuçları Harry Potter içeriyor\", function () {\r",
+              "    pm.expect(jsonData.res[0].title).to.include(\"Harry Potter\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "a4e0fa63-9476-48d7-8aa1-e86a50187e57",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "accept",
+            "value": "*/*"
+          },
+          {
+            "key": "accept-language",
+            "value": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7"
+          },
+          {
+            "key": "cache-control",
+            "value": "max-age=0"
+          },
+          {
+            "key": "content-type",
+            "value": "application/json"
+          },
+          {
+            "key": "origin",
+            "value": "https://www.bkmkitap.com"
+          },
+          {
+            "key": "priority",
+            "value": "u=1, i"
+          },
+          {
+            "key": "referer",
+            "value": "https://www.bkmkitap.com/"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\""
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty"
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors"
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "cross-site"
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+          }
+        ],
+        "url": {
+          "raw": "https://bkm-best.wawlabs.com/search_v2?search_params={\"row_per_page\":200,\"page_number\":1,\"query\":\"chdbcbsadhcbsajxjsnxnj-scjnskjxkskxjskxkx\",\"facet\":[{\"field\":\"category\",\"type\":\"value\"},{\"field\":\"writer\",\"type\":\"value\"}],\"filter\":[{\"field\":\"category\",\"type\":\"value\",\"values\":[]},{\"field\":\"writer\",\"type\":\"value\",\"values\":[]}]}",
+          "protocol": "https",
+          "host": [
+            "bkm-best",
+            "wawlabs",
+            "com"
+          ],
+          "path": [
+            "search_v2"
+          ],
+          "query": [
+            {
+              "key": "search_params",
+              "value": "{\"row_per_page\":200,\"page_number\":1,\"query\":\"chdbcbsadhcbsajxjsnxnj-scjnskjxkskxjskxkx\",\"facet\":[{\"field\":\"category\",\"type\":\"value\"},{\"field\":\"writer\",\"type\":\"value\"}],\"filter\":[{\"field\":\"category\",\"type\":\"value\",\"values\":[]},{\"field\":\"writer\",\"type\":\"value\",\"values\":[]}]}"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl 'https://bkm-best.wawlabs.com/search_v2?search_params=\\{%22row_per_page%22:20,%22page_number%22:1,%22query%22:%22Harry%20Potter2%22,%22facet%22:\\[\\{%22field%22:%22category%22,%22type%22:%22value%22\\},\\{%22field%22:%22writer%22,%22type%22:%22value%22\\}\\],%22filter%22:\\[\\{%22field%22:%22category%22,%22type%22:%22value%22,%22values%22:\\[\\]\\},\\{%22field%22:%22writer%22,%22type%22:%22value%22,%22values%22:\\[\\]\\}\\]\\}' \\\r\n  -H 'accept: */*' \\\r\n  -H 'accept-language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7' \\\r\n  -H 'cache-control: max-age=0' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'origin: https://www.bkmkitap.com' \\\r\n  -H 'priority: u=1, i' \\\r\n  -H 'referer: https://www.bkmkitap.com/' \\\r\n  -H 'sec-ch-ua: \"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-fetch-dest: empty' \\\r\n  -H 'sec-fetch-mode: cors' \\\r\n  -H 'sec-fetch-site: cross-site' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'"
+      },
+      "response": []
+    }
+  ]
+}
