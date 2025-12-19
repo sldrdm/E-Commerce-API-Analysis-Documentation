@@ -11,8 +11,10 @@ Postman kullanarak fonksiyonel ve performans odaklı API testleri gerçekleştir
 Tespit edilen uç vakaları (edge cases) profesyonel bir Bug Report formatında raporlamak.
 
 🏗 Sistem Mimarisi & Akış Şeması
-Sistemin çalışma mantığı, kullanıcı sorgusundan başlayıp CDN üzerinden görsel sunumuna kadar aşağıdaki Sequence Diagram (PlantUML) üzerinde modellenmiştir:
+Sistemin çalışma mantığı, kullanıcı sorgusundan başlayıp CDN üzerinden görsel sunumuna kadar aşağıdaki Sequence Diagram (Miro) üzerinde modellenmiştir:
+
 ![BKMSequenceDiagramSearch-api](https://github.com/user-attachments/assets/b48e9311-ef47-45a7-9be5-3a724fb2d6fe)
+
 🧪 API Test Stratejisi & Test Case'ler
 Postman üzerinde JavaScript kullanılarak hazırlanan test suite, her istekte aşağıdaki senaryoları otomatik olarak doğrulamaktadır:
 Test ID,Senaryo Adı,Kontrol Noktası,Beklenen Sonuç,Durum
@@ -20,7 +22,9 @@ TC01,System Availability,HTTP Status Code,200 OK,✅ PASS
 TC02,Latency Check,Response Time,< 800ms,✅ PASS
 TC03,Data Integrity,Property Check,stock_level mevcut mu?,✅ PASS
 TC04,Content Accuracy,Business Logic,"Başlık ""Harry Potter"" içeriyor mu?",✅ PASS
+
 <img width="1918" height="1022" alt="APITEST1" src="https://github.com/user-attachments/assets/eb7c5c82-fc73-42f8-8320-2ff7c468f78f" />
+
 🐞 Tespit Edilen İyileştirme Alanları (Bug Report)
 Analiz sırasında sistemin negatif senaryolardaki tepkisi ölçülmüştür:
 
