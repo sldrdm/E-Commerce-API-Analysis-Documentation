@@ -16,7 +16,8 @@ Tespit edilen uç vakaları (edge cases) profesyonel bir Bug Report formatında 
 
 Sistemin çalışma mantığı, kullanıcı sorgusundan başlayıp CDN üzerinden görsel sunumuna kadar aşağıdaki Sequence Diagram (Miro) üzerinde modellenmiştir:
 
-![searchApıSequenceDiagram](https://github.com/user-attachments/assets/2c926395-2d42-41aa-a398-78f0510471f6)
+![searchApıSequenceDiagram](https://github.com/user-attachments/assets/7eed2c7f-f68a-48af-b3a9-7da751a99a57)
+
 
 🧪 API Test Stratejisi & Test Case'ler
 
